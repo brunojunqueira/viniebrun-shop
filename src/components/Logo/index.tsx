@@ -1,5 +1,6 @@
 import { Text } from "@chakra-ui/react";
 import '@fontsource/dancing-script/400.css'
+import redirectTo from "../../functions/redirectTo";
 
 export default function Logo() {
   return (
@@ -8,6 +9,9 @@ export default function Logo() {
     fontFamily={'Dancing Script'}
     textAlign={'center'}
     lineHeight={1}
+    userSelect={'none'}
+    cursor={'pointer'}
+    onClick={ () => redirectTo('/') }
 >
     <Text
         as={'span'}

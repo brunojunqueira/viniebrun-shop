@@ -1,7 +1,8 @@
 import { Flex, Text } from "@chakra-ui/react";
-import HeaderItem from "../HeaderItem";
+import HeaderItem from "./HeaderItem";
 import Logo from "../Logo";
 import SearchBar from "../SearchBar";
+import redirectTo from "../../functions/redirectTo";
 
 export default function Header() {
   return (
@@ -20,28 +21,38 @@ export default function Header() {
             align={'center'}
             gap={5}
         >   
-            <HeaderItem
-                iconName={'akar-icons:facebook-fill'}
-                label={'Facebook'}
-                onClick={ () => window.open('https://www.facebook.com/viniebrun', '_blank') }
-            />
-            <HeaderItem
-                iconName={'akar-icons:instagram-fill'}
-                label={'Instagram'}
-                onClick={ () => window.open('https://www.instagram.com/ivaniviniebrun/', '_blank') }
-            />
+            <Flex
+                align={'center'}
+            >
+                <HeaderItem
+                    iconName={'akar-icons:facebook-fill'}
+                    label={'Facebook'}
+                    onClick={ () => redirectTo('https://www.facebook.com/viniebrun', true) }
+                />
+                <HeaderItem
+                    iconName={'akar-icons:instagram-fill'}
+                    label={'Instagram'}
+                    onClick={ () => redirectTo('https://www.instagram.com/ivaniviniebrun/', true) }
+                />
+            </Flex>
+            
             <SearchBar/>
-            <HeaderItem 
-                iconName={'bi:cart'} 
-                label={'Carrinho'}
-                onClick={()=>{}}
-                badgeCounter={0}
-            />
-            <HeaderItem
-                iconName={'bi:headset'}
-                label={'Atendimento'}
-                onClick={()=>{}}
-            />
+
+            <Flex
+                align={'center'}
+            >
+                <HeaderItem 
+                    iconName={'bi:cart'} 
+                    label={'Carrinho'}
+                    onClick={()=>{}}
+                    badgeCounter={0}
+                />
+                <HeaderItem
+                    iconName={'bi:headset'}
+                    label={'Atendimento'}
+                    onClick={()=> redirectTo('/atendimento')}
+                />
+            </Flex>
         </Flex>
         
     </Flex>

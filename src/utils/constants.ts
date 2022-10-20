@@ -1,0 +1,2 @@
+export const DOUBT_TEXT = "Olá, estou com dúvida sobre a loja. Poderia me ajudar?";
+export const WA_IMAGE_URL = "https://scontent.fbhz2-1.fna.fbcdn.net/v/t39.8562-6/302524815_3448899778679909_2843186333341006023_n.png?_nc_cat=104&ccb=1-7&_nc_sid=6825c5&_nc_ohc=2Mne_hf90CsAX9JSXcE&_nc_ht=scontent.fbhz2-1.fna&oh=00_AT8gQ9vWb_aO55G7lxZINUoZP3BtNUtcj-holaidSOBD6w&oe=6356B30F";
