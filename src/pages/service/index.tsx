@@ -2,7 +2,7 @@ import { Flex, Image, Text, Tooltip } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
 import redirectTo from "../../functions/redirectTo";
 
-import { WA_IMAGE_URL, DOUBT_TEXT } from "../../utils/constants";
+import { DOUBT_TEXT } from "../../utils/constants";
 
 export default function Service(){
     return(
@@ -27,8 +27,8 @@ export default function Service(){
                 <Image
                     h={'3rem'}
                     cursor={'pointer'}
-                    src={WA_IMAGE_URL}
-                    onClick={ () => redirectTo(`https://wa.me/5521976592141?text=${DOUBT_TEXT}`, true) }
+                    src={'/wa-image.png'}
+                    onClick={ () => redirectTo(`${import.meta.env.VITE_APP_WA_NUMBER_URL}?text=${DOUBT_TEXT}`, true) }
                 />
             </Tooltip>
             <Text

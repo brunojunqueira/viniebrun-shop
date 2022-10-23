@@ -33,7 +33,7 @@ export default function HeaderItem({iconName, label, onClick, badgeCounter, ...r
             icon={iconName}
             fontSize={30}
           />
-          { badgeCounter || badgeCounter !== 0 &&
+          { Boolean(badgeCounter) &&
             <Badge
               position={'absolute'}
               top={0}

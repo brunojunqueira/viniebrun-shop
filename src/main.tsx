@@ -1,31 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ChakraProvider } from '@chakra-ui/react'
 
 import App from './App'
-import Service from './pages/service'
 
 import Header from './components/Header'
 
 import { mainTheme } from './theme'
+import { CartProvider } from './contexts/CartContext'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ChakraProvider theme={mainTheme}>
-      <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path={'/'}
-            element={<App/>}
-          />
-          <Route
-            path={'/atendimento'}
-            element={<Service/>}
-          />
-        </Routes>
-      </BrowserRouter>
+      <CartProvider>
+        <Header />
+        <App />
+      </CartProvider>
     </ChakraProvider>
   </React.StrictMode>
 )

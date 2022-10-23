@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "imgURL": "/imgs/flower.jpg",
+        "name": "Flor de Biscuit Lorem ipsum lorem ipsum",
+        "description": "Lorem ipsum lorem ipsum lorem",
+        "price": 10.30,
+        "unitsAvailable": 10,
+        "rating": 4,
+        "reviewCount": 60
+    },
+    {
+        "id": 2,
+        "imgURL": "/imgs/bolo.jpg",
+        "name": "Bolo de Biscuit Princesa Encantada",
+        "description": "Lorem ipsum lorem ipsum lorem",
+        "price": 200.99,
+        "unitsAvailable": 20,
+        "rating": 5,
+        "reviewCount": 100
+    }
+]

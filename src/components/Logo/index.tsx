@@ -1,10 +1,23 @@
-import { Text } from "@chakra-ui/react";
+import { Image, ImgProps, Text } from "@chakra-ui/react";
 import '@fontsource/dancing-script/400.css'
 import redirectTo from "../../functions/redirectTo";
 
-export default function Logo() {
+interface LogoProps extends ImgProps {}
+
+export default function Logo({...rest} : LogoProps) {
   return (
-    <Text
+    <Image
+        src={'/logo.png'}
+        w={'15rem'}
+        cursor={'pointer'}
+        onClick={()=>redirectTo('/')}
+        {...rest}
+    />
+  )
+}
+
+/* OLD LOGO
+<Text
     as={'h1'}
     fontFamily={'Dancing Script'}
     textAlign={'center'}
@@ -40,6 +53,5 @@ export default function Logo() {
     >
         Biscuit. Amor em cada detalhe
     </Text>
-</Text>
-  )
-}
+</Text> 
+*/

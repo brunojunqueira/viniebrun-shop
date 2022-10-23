@@ -1,16 +1,28 @@
-import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Cart from './pages/cart'
 
-import { Flex } from '@chakra-ui/react'
+import Home from './pages/home'
+import Service from './pages/service'
 
 function App() {
 
   return (
-    <Flex
-      p={0}
-      flexDir={'column'}
-    >
-      
-    </Flex>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path={'/'}
+          element={<Home/>}
+        />
+        <Route
+          path={'/atendimento'}
+          element={<Service/>}
+        />
+        <Route
+          path={'/carrinho'}
+          element={<Cart/>}
+        />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
